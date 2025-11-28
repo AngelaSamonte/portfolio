@@ -1,24 +1,52 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffe0ea;
+    padding: 12px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.topnav a {
+    text-decoration: none;
+    color: #d86c8b;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    border-radius: 6px;
+}
+
+.topnav a:hover {
+    background-color: #ffdce9;
+    transform: scale(1.08);
+}
+
 body {
     margin: 0;
-    background: #FFEDAB;
+    background: #FFF4C9;
     font-family: 'Poppins', sans-serif;
 }
 
 .notebook {
     max-width: 800px;
-    margin: 30px auto;
-    background: lightpink;
-    padding: 20px 40px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
-    border: 2px solid #FDF8E2;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 25px rgba(0,0,0,0.15);
 }
 
-header {
+.header-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    gap: 25px;
     padding: 20px;
 }
 
@@ -30,25 +58,38 @@ header {
     border: 5px solid #ffbfd2;
 }
 
-.header-text {
-    text-align: left;
-}
-
 .header-text h1 {
-    font-family: 'Playfair Display', serif;
     margin: 0;
     font-size: 32px;
+    font-weight: 700;
     color: #d86c8b;
 }
 
-.header-text .subtitle {
-    color: #6b9071;
-    font-weight: 400;
+.subtitle {
     margin-top: 5px;
+    color: #6b9071;
 }
 
 .page {
-    background: rgba(255,255,255,0.8);
+    background: #fff7eb;
+    padding: 20px 25px;
+    margin: 28px 0;
+    border-left: 8px solid #e4c9a9;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #d86c8b;
+    margin-bottom: 15px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
     padding: 20px;
-    margin: 30px 0;
-    border
+    background: #ffe0ea;
+    color: #c96b8c;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
