@@ -5,7 +5,7 @@ html {
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #FFFDE7;
+    background: #FFFDE7; 
 }
 
 nav {
@@ -24,4 +24,93 @@ nav a {
     color: #d86c8b;
     font-weight: bold;
     padding: 8px 15px;
-    bord
+    border-radius: 5px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+nav a:hover {
+    background: #FFF59D; 
+    transform: scale(1.05);
+}
+
+.full-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.full-section.visible {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* Animations */
+.fade-in-home { transform: translateY(-30px); }
+.fade-in-left { transform: translateX(-50px); }
+.fade-in-right { transform: translateX(50px); }
+.fade-in-bottom { transform: translateY(50px); }
+
+.full-section.visible.fade-in-home { transform: translateY(0); }
+.full-section.visible.fade-in-left { transform: translateX(0); }
+.full-section.visible.fade-in-right { transform: translateX(0); }
+.full-section.visible.fade-in-bottom { transform: translateY(0); }
+
+h1 {
+    font-size: 38px;
+    color: #d86c8b;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 32px;
+    color: #d86c8b;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #d86c8b;
+    margin-bottom: 10px;
+}
+
+p, li {
+    color: #6b9071;
+    line-height: 1.6;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffbfd2;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.skill-group {
+    background: #FFF9C4; 
+    padding: 20px 30px;
+    border-radius: 12px;
+    min-width: 220px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-group:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.15);
+}
