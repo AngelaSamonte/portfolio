@@ -41,6 +41,14 @@ nav a:hover {
     align-items: center;
     text-align: center;
     padding: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.full-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .profile-photo {
@@ -64,6 +72,12 @@ h2 {
     margin-bottom: 15px;
 }
 
+h3 {
+    font-size: 22px;
+    color: #d86c8b;
+    margin-bottom: 10px;
+}
+
 p, li {
     color: #6b9071;
 }
@@ -75,4 +89,18 @@ ul {
 
 li {
     margin: 5px 0;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.skill-group {
+    background: #fff0f5;
+    padding: 15px 25px;
+    border-radius: 10px;
+    min-width: 220px;
 }
