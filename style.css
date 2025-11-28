@@ -5,7 +5,7 @@ html {
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #FFF4C9;
+    background: #FFF8F0;
 }
 
 nav {
@@ -34,21 +34,54 @@ nav a:hover {
 }
 
 .full-section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
     opacity: 0;
-    transform: translateY(30px);
     transition: opacity 1s ease, transform 1s ease;
 }
 
 .full-section.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(0);
+}
+
+/* Animations */
+.fade-in-home { transform: translateY(-30px); }
+.fade-in-left { transform: translateX(-50px); }
+.fade-in-right { transform: translateX(50px); }
+.fade-in-bottom { transform: translateY(50px); }
+
+.full-section.visible.fade-in-home { transform: translateY(0); }
+.full-section.visible.fade-in-left { transform: translateX(0); }
+.full-section.visible.fade-in-right { transform: translateX(0); }
+.full-section.visible.fade-in-bottom { transform: translateY(0); }
+
+h1 {
+    font-size: 38px;
+    color: #d86c8b;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 32px;
+    color: #d86c8b;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #d86c8b;
+    margin-bottom: 10px;
+}
+
+p, li {
+    color: #6b9071;
+    line-height: 1.6;
 }
 
 .profile-photo {
@@ -60,47 +93,17 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-h1 {
-    font-size: 32px;
-    color: #d86c8b;
-    margin: 10px 0;
-}
-
-h2 {
-    font-size: 28px;
-    color: #d86c8b;
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-size: 22px;
-    color: #d86c8b;
-    margin-bottom: 10px;
-}
-
-p, li {
-    color: #6b9071;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-li {
-    margin: 5px 0;
-}
-
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
+    margin-top: 20px;
 }
 
 .skill-group {
     background: #fff0f5;
-    padding: 15px 25px;
-    border-radius: 10px;
+    padding: 20px 30px;
+    border-radius: 12px;
     min-width: 220px;
 }
